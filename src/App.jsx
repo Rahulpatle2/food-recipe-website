@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from './components/Navbar';
 import MainRoutes from './routes/MainRoutes';
 import NavForSmall from './components/NavForSmall';
 
