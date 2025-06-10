@@ -8,15 +8,10 @@ import { Link } from 'react-router-dom'
 const Home = () => {
   const {data} = useContext(recipecontext);
 
-  const recipe = data.map((r) =>{
-    return r
-  })
-
-  console.log(recipe);
-  console.log(recipe[0].image);
+  
   return (
-    <div className='flex items-center justify-center flex-col p-12 gap-7 text-center'>
-      <h1 className='text-5xl font-bold'>Your Daily Dish A <span className='text-red-500'>Food</span> journey </h1>
+    <div className='flex items-center justify-center flex-col p-12 gap-7 '>
+      <h1 className='text-5xl font-bold'>Your Daily Dish A <span className='text-red-500'>Food</span> Journey </h1>
       <p className='text-xl font-thin'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam deserunt hic tempore, dolor, quasi quae similique vel atque illo tempora, totam quia ducimus aut saepe sunt.</p>
 
       <div className='flex items-center gap-7'>
@@ -24,7 +19,7 @@ const Home = () => {
         <button className='bg-green-400 text-white px-3 py-1.5 rounded hover:outline-1 hover:bg-white hover:text-green-500'>Sign up</button>
       </div>
 
-      <div className='w-82  object-fit object-cover rounded shadow '>
+      <div className='w-96  object-fit object-cover rounded shadow '>
         <img src={HomePageImage1} alt="image1" className='rounded' />
       </div>
 

@@ -20,17 +20,19 @@ const Create = () => {
 
   const SubmitHandler = (recipe) => { 
     recipe.id = nanoid(); 
-    setdata(prevData => [...prevData, recipe]); 
+    const copyData = [...data];
+    copyData.push(recipe);
+    setdata(copyData)
     toast.success('new recipe created successfully')
     reset();
-    navigate(-1);
+    navigate('/recipes');
   }
 
   // console.log(SubmitHandler);
   // console.log(data);
   return (
     <div className='w-screen flex items-center justify-center'>
-      <form onSubmit={handleSubmit(SubmitHandler)} className='flex flex-col  gap-7 border p-12 w-1/3 rounded shadow mt-5'>
+      <form onSubmit={handleSubmit(SubmitHandler)} className='flex flex-col  gap-7 border p-12 lg:w-1/3 rounded shadow mt-5'>
         <h1 className='text-center text-3xl font-black pb-5'>Create Your Recipe</h1>
 
         <input type="text"
